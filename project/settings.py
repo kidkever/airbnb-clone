@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -44,6 +45,9 @@ INSTALLED_APPS = [
     "about",
     "settings",
     "taggit",
+    "django_summernote",
+    "bootstrap4",
+    "django_filters",
 ]
 
 MIDDLEWARE = [
@@ -131,12 +135,11 @@ STATICFILES_DIRS = [
 ]
 
 MEDIA_URL = "/media/"
-MEDIAFILES_DIRS = [
-    BASE_DIR / "media",
-    '/var/www/media/',
-]
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+X_FRAME_OPTIONS = 'SAMEORIGIN'
