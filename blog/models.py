@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.urls.base import reverse
 from django.utils import timezone
 from taggit.managers import TaggableManager
 from django.utils.text import slugify
@@ -24,6 +25,9 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+    def get_absolute_url(self):
+        return reverse("blog:post_detail", kwargs={"slug": self.slug})
 
 
 class Category(models.Model):
