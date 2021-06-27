@@ -7,6 +7,7 @@ class Settings(models.Model):
     phone = models.CharField(max_length=20)
     email = models.EmailField(max_length=254)
     description = models.TextField(max_length=300)
+    address = models.CharField(max_length=100)
     facebook_link = models.URLField(max_length=200)
     twitter_link = models.URLField(max_length=200)
     instagram_link = models.URLField(max_length=200)

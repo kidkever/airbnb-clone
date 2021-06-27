@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>DirEngine - Free Bootstrap 4 Template by Colorlib</title>
+    <title>{{myfooter.site_name}}</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -54,7 +54,7 @@
       id="ftco-navbar"
     >
       <div class="container">
-        <a class="navbar-brand" href="index.html">dirEngine.</a>
+        <a class="navbar-brand" href="/">{{myfooter.site_name}}</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -105,10 +105,9 @@
         <div class="row mb-5">
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">dirEngine</h2>
+              <h2 class="ftco-heading-2">{{myfooter.site_name}}</h2>
               <p>
-                Far far away, behind the word mountains, far from the countries
-                Vokalia and Consonantia, there live the blind texts.
+                {{myfooter.description}}
               </p>
               <ul
                 class="
@@ -119,13 +118,13 @@
                 "
               >
                 <li class="ftco-animate">
-                  <a href="#"><span class="icon-twitter"></span></a>
+                  <a href="{{myfooter.twitter_link}}"><span class="icon-twitter"></span></a>
                 </li>
                 <li class="ftco-animate">
-                  <a href="#"><span class="icon-facebook"></span></a>
+                  <a href="{{myfooter.facebook_link}}"><span class="icon-facebook"></span></a>
                 </li>
                 <li class="ftco-animate">
-                  <a href="#"><span class="icon-instagram"></span></a>
+                  <a href="{{myfooter.instagram_link}}"><span class="icon-instagram"></span></a>
                 </li>
               </ul>
             </div>
@@ -167,20 +166,19 @@
                   <li>
                     <span class="icon icon-map-marker"></span
                     ><span class="text"
-                      >203 Fake St. Mountain View, San Francisco, California,
-                      USA</span
+                      >{{myfooter.address}}</span
                     >
                   </li>
                   <li>
                     <a href="#"
                       ><span class="icon icon-phone"></span
-                      ><span class="text">+2 392 3929 210</span></a
+                      ><span class="text">{{myfooter.phone}}</span></a
                     >
                   </li>
                   <li>
                     <a href="#"
                       ><span class="icon icon-envelope"></span
-                      ><span class="text">info@yourdomain.com</span></a
+                      ><span class="text">{{myfooter.email}}</span></a
                     >
                   </li>
                 </ul>
