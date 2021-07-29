@@ -27,7 +27,11 @@
                 </a>
                 <div class="text p-4 d-block">
                   {% for tag in post.tags.all %}
-                    <span class="tag">{{tag}}, </span>
+                    {% if forloop.last %}
+                      <span class="tag">{{tag}} </span>
+                    {% else %}
+                      <span class="tag">{{tag}}, </span>
+                    {% endif %}
                   {% endfor %}
                   <h3 class="heading mt-3"><a href="{{post.get_absolute_url}}">{{post}}</a></h3>
                   <div class="meta mb-3">
