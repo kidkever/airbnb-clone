@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-&tr(5pqvpw!*fqs^ynvv981dav8s^(vb&o461_z32=^x%$)8nb
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['mazen-airbnb.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
