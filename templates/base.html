@@ -84,11 +84,23 @@
             <li class="nav-item">
               <a href="{% url 'home:contact_us' %}" class="nav-link">Contact</a>
             </li>
-            <li class="nav-item cta">
-              <a href="contact.html" class="nav-link"
-                ><span>Add listing</span></a
-              >
-            </li>
+
+            {% if request.user.is_authenticated %}
+              <li class="nav-item">
+                <a href="{% url 'accounts:profile' %}" class="nav-link">Profile</a>
+              </li>
+              <li class="nav-item cta">
+                <a href="{% url 'accounts:add_listing' %}" class="nav-link"
+                  ><span>Add listing</span></a
+                >
+              </li>
+            {% else %}
+              <li class="nav-item cta">
+                <a href="{% url 'login' %}" class="nav-link"
+                  ><span>Signin/Singup</span></a
+                >
+              </li>
+            {% endif %}
           </ul>
         </div>
       </div>

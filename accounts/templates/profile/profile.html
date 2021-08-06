@@ -19,10 +19,14 @@
 </div>
 
 <div class="row">
-    <div class="col-md-4 mx-auto my-5">
-			<h3 class='text-center'>Hey, {{profile.user.username}}</h3>
-			<h5><a href="{% url 'accounts:profile_edit' %}">Edit Profile</a></h5>
-			<h5><a href="{% url 'password_change' %}">Change Password</a></h5>
+    <div class="col-md-4 mx-auto my-5 text-center">
+			<h3 class='mb-5'>Hey, {{profile.user.username}}</h3>
+			<h5 class='my-4'><a href="{% url 'accounts:add_listing' %}" >Add Listing</a></h5>
+			<h5 class='my-4'><a href="{% url 'accounts:listing' %}" >My Listing</a></h5>
+			<h5 class='my-4'><a href="{% url 'accounts:reservations' %}" >My Reservations</a></h5>
+			<h5 class='my-4'><a href="{% url 'accounts:profile_edit' %}" >Edit Profile</a></h5>
+			<h5 class='my-4'><a href="{% url 'password_change' %}" >Change Password</a></h5>
+			<h4 class='mt-5'><a href="{% url 'logout' %}">Logout</a></h4>
     </div>
 </div>
 

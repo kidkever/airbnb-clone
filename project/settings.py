@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-&tr(5pqvpw!*fqs^ynvv981dav8s^(vb&o461_z32=^x%$)8nb
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['mazen-airbnb.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['mazen-airbnb.herokuapp.com', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     "django_summernote",
     "bootstrap4",
     "django_filters",
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -140,7 +141,8 @@ STATICFILES_DIRS = [
 ]
 
 MEDIA_URL = "/media/"
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+MEDIA_ROOT = BASE_DIR / "media"
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 
 # Default primary key field type
